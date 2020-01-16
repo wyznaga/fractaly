@@ -1,4 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+// // Plus imports for other components in your app.
 
-html, body { height: 100%; }
+// // Include the common styles for Angular Material. We include this here so that you only
+// // have to load a single css file for Angular Material in your app.
+// // **Be sure that you only ever include this mixin once!**
+// @include mat-core();
+
+// // Define the theme.
+// $fractaly-app-primary: mat-palette($mat-purple);
+// $fractaly-app-accent:  mat-palette($mat-green);
+// $fractaly-app-theme:   mat-dark-theme($fractaly-app-primary, $fractaly-app-accent);
+
+// // Include the theme styles for only specified components.
+// @include mat-core-theme($fractaly-app-theme);
+// @include mat-button-theme($fractaly-app-theme);
+// @include mat-toolbar-theme($fractaly-app-theme);
+
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+
+html, body, app-root, .app-frame {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
