@@ -1,0 +1,38 @@
+// inspired by How to Build a Responsive Image Gallery with Flexbox by Tania Rascia
+// https://www.taniarascia.com/how-to-build-a-responsive-image-gallery-with-flexbox/
+
+.gallery {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.gallery__image {
+  max-width: 100%;
+}
+
+.gallery__grid__cell {
+  margin: 0.5rem;
+}
+
+.gallery__grid__cell img {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .gallery__grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .gallery__grid__cell {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .gallery__grid__cell {
+    width: calc(33.3333% - 1rem);
+  }
+}

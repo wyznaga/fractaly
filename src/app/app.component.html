@@ -2,12 +2,5 @@
   <mat-toolbar>
     <span>Fractaly</span>
   </mat-toolbar>
-  <mat-grid-list cols="3" rowHeight="200px">
-    <mat-grid-tile
-      *ngFor="let tile of tiles"
-      [colspan]="tile.cols"
-      [rowspan]="tile.rows">
-    {{tile.text}}
-  </mat-grid-tile>
-  </mat-grid-list>
+  <app-gallery></app-gallery>
 </div>

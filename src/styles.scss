@@ -20,10 +20,10 @@
 
 
 html, body, app-root, .app-frame {
-  overflow: hidden;
+  overflow: scroll;
   margin: 0;
   height: 100%;
   box-sizing: border-box;
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
