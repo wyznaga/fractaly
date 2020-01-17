@@ -19,10 +19,11 @@
 @import '@angular/material/prebuilt-themes/purple-green.css';
 
 
-html, body, app-root, .app-frame {
+html, body, app-root {
   overflow: scroll;
   margin: 0;
-  height: 100%;
+  height: initial;
+  width: initial;
   box-sizing: border-box;
 }
 
