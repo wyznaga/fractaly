@@ -20,11 +20,12 @@
 
 
 html, body, app-root {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   margin: 0;
   height: initial;
   width: initial;
   box-sizing: border-box;
 }
 
-body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; display: inline }
