@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    name: Build (Prod) and Pages Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        run: npm install
+        env:
+          NG_CLI_ANALYTICS: ci
+      - name: Build
+        run: npm run prod
+      - name: Deploy
+        run: mv dist docs
