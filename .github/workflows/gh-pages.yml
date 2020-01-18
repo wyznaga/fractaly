@@ -4,17 +4,27 @@ on:
   push:
     branches:
     - master
+    paths:
+      - "*"
 
 jobs:
   build:
     name: Build (Prod) and Pages Deploy
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
+      - name: Setup Node.js 10.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 10.x
       - name: Setup
         run: npm install
+        working-directory: ${{ github.workspace }}
         env:
           NG_CLI_ANALYTICS: ci
       - name: Build
         run: npm run prod
+        working-directory: ${{ github.workspace }}
       - name: Deploy
         run: mv dist docs
+        working-directory: ${{ github.workspace }}
