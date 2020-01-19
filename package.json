@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prod": "ng build --prod --aot"
+    "prod": "ng build --prod --aot --base-href /fractaly/"
   },
   "private": true,
   "dependencies": {
